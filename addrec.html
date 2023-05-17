@@ -23,12 +23,14 @@
     <nav class="nav">
       <a href="#" class="brand-name">Barangay 48, Pasay City</a>
       <ul class="nav-links">
+        <!-- pabago nalang href -->
         <li><a href="#">Dashboard</a></li>
         <li><a href="#">Application</a></li>
         <li><a href="#">List</a></li>
       </ul>
       <img
         class="logo-png"
+        href="#"
         src="/pasay-logo-small.png"
         alt="PasayLogo"
         id="brngyPic"
@@ -81,10 +83,10 @@
                 <label>Age</label>
                 <input
                   type="number"
-                  placeholder="Enter mobile number"
+                  placeholder="Enter age"
                   required
-                  value="<?php if (isset($_GET['MobileNum']))
-                                                                                        echo ($_GET['MobileNum']); ?>"
+                  value="<?php if (isset($_GET['Agee']))
+                                                                              echo ($_GET['Agee']); ?>"
                 />
               </div>
 
@@ -117,7 +119,13 @@
             <div class="fields">
               <div class="input-field">
                 <label>ID Type</label>
-                <input type="text" placeholder="Enter ID type" />
+                <select>
+                  <option disabled selected>Select Valid ID</option>
+                  <option>Senior Citizen ID</option>
+                  <option>Driver's License</option>
+                  <option>Passport</option>
+                  <option>SSS</option>
+                </select>
               </div>
 
               <div class="input-field">
@@ -145,14 +153,10 @@
                 <input type="date" />
               </div>
             </div>
-
-            <button class="nextBtn">
-              <span class="btnText">Next</span>
-              <i class="uil uil-navigator"></i>
-            </button>
           </div>
         </div>
-        <!-- dito sa address i think need i seperate yung province,city,house no.  etc etc -->
+
+        <!-- secondz -->
         <div class="form second">
           <div class="details address">
             <span class="title">Address Details</span>
@@ -227,7 +231,7 @@
           </div>
 
           <div class="details family">
-            <span class="title">Family Details</span>
+            <span class="title">Emergency Contact</span>
 
             <div class="fields">
               <div class="input-field">
@@ -253,81 +257,72 @@
               </div>
 
               <div class="input-field">
-                <label>Grandfather</label>
+                <label>Emergency Contact Number</label>
                 <input
                   type="text"
-                  placeholder="Enter grandfther name"
+                  placeholder="Enter contact number"
                   value="<?php
-                                                                            if (isset($_GET['Grandpapi']))
-                                                                              echo ($_GET['Grandpapi']); ?>"
+                                                                            if (isset($_GET['emergencyCN']))
+                                                                              echo ($_GET['emergencyCN']); ?>"
                 />
               </div>
 
               <div class="input-field">
-                <label>Spouse Name</label>
+                <label>Name of Contact</label>
                 <input
                   type="text"
-                  placeholder="Enter spouse name"
+                  placeholder="Enter name of contact"
                   value="<?php
-                                                                        if (isset($_GET['SpouseName']))
-                                                                          echo ($_GET['SpouseName']); ?>"
+                                                                            if (isset($_GET['SpouseName']))
+                                                                              echo ($_GET['SpouseName']); ?>"
                 />
               </div>
 
               <div class="input-field">
-                <label>Father in Law</label>
+                <label>Relationship</label>
                 <input
                   type="text"
-                  placeholder="Father in law name"
+                  placeholder="Enter relationship"
                   value="<?php
-                                                                          if (isset($_GET['FatherinLaw']))
-                                                                            echo ($_GET['FatherinLaw']); ?>"
+                                                                          if (isset($_GET['RelationshipEC']))
+                                                                            echo ($_GET['RelationshipEC']); ?>"
                 />
               </div>
 
               <div class="input-field">
-                <label>Mother in Law</label>
+                <label>Blood Type</label>
                 <input
                   type="text"
-                  placeholder="Mother in law name"
+                  placeholder="Enter blood type"
                   value="<?php
-                                                                          if (isset($_GET['MotherinLaw']))
-                                                                            echo ($_GET['MotherinLaw']); ?>"
+                                                                        if (isset($_GET['BloodType']))
+                                                                          echo ($_GET['BloodType']); ?>"
                 />
               </div>
             </div>
+          </div>
+        </div>
 
-            <div class="details family">
-              <span class="title">Identification</span>
+        <div class="form third">
+          <div class="details ID">
+            <span class="title">Identification</span>
 
-              <div class="fields">
-                <div class="input-field">
-                  <label>Upload your Image</label>
-                  <input
-                    type="image"
-                    placeholder="Enter your first name"
-                    required
-                    value=""
-                  />
-                </div>
+            <div class="fields">
+              <div class="input-field-img">
+                <label>Upload your Image</label>
+                <input class="img-select" type="file" required />
               </div>
             </div>
+          </div>
 
-            <div class="buttons">
-              <div class="backBtn">
-                <i class="uil uil-navigator"></i>
-                <span class="btnText">Back</span>
-              </div>
-
-              <button class="sumbit">
-                <span class="btnText">Submit</span>
-                <i class="uil uil-navigator"></i>
-              </button>
-            </div>
+          <div class="buttons">
+            <button class="sumbit">
+              <span class="btnText">Submit</span>
+              <i class="uil uil-navigator"></i>
+            </button>
           </div>
         </div>
       </form>
     </div>
-    <script src="btnOnClick.js"></script>
   </body>
 </html>

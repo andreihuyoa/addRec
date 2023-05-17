@@ -7,8 +7,9 @@
   o call ka nalang using var(tas pili ka below) 
   o 
   */
-  --primary-color: #394b78;
-  --secondary-color: #212a41;
+  --primary-color: #0b2447;
+  --secondary-color: #19376d;
+  --tertiary-color: #576cbc;
   --white: rgb(240, 250, 240);
   --title-fontsize: 35px;
   --subheading-fontsize-h1: 28px;
@@ -42,9 +43,9 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 15px 200px;
-  margin-bottom: 5em;
-  background: #416188;
+  padding: 13px 70px;
+  margin-bottom: 2em;
+  background: var(--tertiary-color);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -87,7 +88,7 @@ a {
   width: 100%;
   border-radius: 6px;
   padding: 30px;
-  margin: 0 15px;
+  margin: 15px 25px;
   background-color: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
@@ -101,11 +102,11 @@ a {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -2px;
-  height: 3px;
+  bottom: -4px;
+  height: 7px;
   width: 27px;
   border-radius: 8px;
-  background-color: #4070f4;
+  background-color: var(--tertiary-color);
 }
 .container form {
   position: relative;
@@ -114,26 +115,13 @@ a {
   background-color: #fff;
   overflow: hidden;
 }
+/* eto yung mga naka tago atn */
 .container form .form {
-  position: absolute;
+  /* position: absolute; */
   background-color: #fff;
   transition: 0.3s ease;
 }
-.container form .form.second {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateX(100%);
-}
-form.secActive .form.second {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateX(0);
-}
-form.secActive .form.first {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateX(-100%);
-}
+
 .container form .title {
   display: block;
   margin-bottom: 8px;
@@ -154,7 +142,8 @@ form .fields .input-field {
   flex-direction: column;
   margin: 4px 0;
 }
-.input-field label {
+.input-field,
+.input-field-img label {
   font-size: 12px;
   font-weight: 500;
   color: #2e2e2e;
@@ -182,20 +171,35 @@ select {
 .input-field input[type="date"]:valid {
   color: #333;
 }
-.container form button,
-.backBtn {
+
+form .fields .input-field-img {
+  display: flex;
+  flex-direction: column;
+  margin: 4px 0;
+}
+
+.input-field-img input {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  padding: 0 15px;
+  height: 42px;
+  margin: 15px -15px;
+}
+
+.container form button {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 45px;
-  max-width: 200px;
+  height: 50px;
+  max-width: 150px;
   width: 100%;
   border: none;
   outline: none;
   color: #fff;
-  border-radius: 5px;
-  margin: 25px 0;
-  background-color: #4070f4;
+  border-radius: 8px;
+  margin: 10px 0;
+  background-color: var(--tertiary-color);
   transition: all 0.3s linear;
   cursor: pointer;
 }
@@ -206,20 +210,8 @@ select {
 form button:hover {
   background-color: #265df2;
 }
-form button i,
-form .backBtn i {
-  margin: 0 6px;
-}
-form .backBtn i {
-  transform: rotate(180deg);
-}
-form .buttons {
-  display: flex;
-  align-items: r;
-}
-form .buttons button,
-.backBtn {
-  margin-right: 14px;
+form button i {
+  margin: 0 10px;
 }
 
 /* responsiveeezzzz */
