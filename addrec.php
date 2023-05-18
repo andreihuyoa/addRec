@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - codingnepalweb.com -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,7 +14,7 @@
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
 
-    <title>Responsive Regisration Form</title>
+    <title>Regisration Form</title>
   </head>
 
   <body>
